@@ -6,13 +6,13 @@ internal class CsvPVDataExporter
 {
     private static string[] _columnNames = { "ID", "Name (EN)", "Name (JP)", "Source", "Artist (EN)", "Artist (JP)",
         "Easy", "Normal", "Hard", "EX", "EX EX" };
+    private static string fileExtension = ".csv";
 
-    public static async Task OutputPVDataToFile(string outputDirectory, PVData[][] data)
+    public static async Task OutputPVDataToFile(string fullOutputFilePath, PVData[][] data)
     {
         string[][] rows = BuildRowsFromPVData(data);
         string csvData = CsvWriter.WriteToText(_columnNames, rows, ',');
-        string outputFilePath = Path.Join(outputDirectory, "test.csv"); // TODO: update name
-        await File.WriteAllTextAsync(outputFilePath, csvData);
+        await File.WriteAllTextAsync(fullOutputFilePath + fileExtension, csvData);
     }
 
     private static string[][] BuildRowsFromPVData(PVData[][] data)
