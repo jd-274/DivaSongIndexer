@@ -36,8 +36,8 @@
             outputDirectoryTextBox = new TextBox();
             label2 = new Label();
             createSongIndexButton = new Button();
-            loadingIconPictureBox = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)loadingIconPictureBox).BeginInit();
+            loadingSpinnerPictureBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)loadingSpinnerPictureBox).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -104,16 +104,16 @@
             createSongIndexButton.UseVisualStyleBackColor = true;
             createSongIndexButton.Click += createSongIndexButton_Click;
             // 
-            // loadingIconPictureBox
+            // loadingSpinnerPictureBox
             // 
-            loadingIconPictureBox.Image = Properties.Resources.LoadingSpinner;
-            loadingIconPictureBox.Location = new Point(365, 145);
-            loadingIconPictureBox.Name = "loadingIconPictureBox";
-            loadingIconPictureBox.Size = new Size(25, 25);
-            loadingIconPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-            loadingIconPictureBox.TabIndex = 8;
-            loadingIconPictureBox.TabStop = false;
-            loadingIconPictureBox.Visible = false;
+            loadingSpinnerPictureBox.Image = Properties.Resources.LoadingSpinner;
+            loadingSpinnerPictureBox.Location = new Point(365, 145);
+            loadingSpinnerPictureBox.Name = "loadingSpinnerPictureBox";
+            loadingSpinnerPictureBox.Size = new Size(25, 25);
+            loadingSpinnerPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            loadingSpinnerPictureBox.TabIndex = 8;
+            loadingSpinnerPictureBox.TabStop = false;
+            loadingSpinnerPictureBox.Visible = false;
             // 
             // MainForm
             // 
@@ -121,7 +121,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(559, 191);
-            Controls.Add(loadingIconPictureBox);
+            Controls.Add(loadingSpinnerPictureBox);
             Controls.Add(createSongIndexButton);
             Controls.Add(outputDirectoryBrowseButton);
             Controls.Add(outputDirectoryTextBox);
@@ -132,7 +132,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "MainForm";
             Text = "DivaSongIndexer";
-            ((System.ComponentModel.ISupportInitialize)loadingIconPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)loadingSpinnerPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,6 +146,6 @@
         private TextBox outputDirectoryTextBox;
         private Label label2;
         private Button createSongIndexButton;
-        private PictureBox loadingIconPictureBox;
+        private PictureBox loadingSpinnerPictureBox;
     }
 }

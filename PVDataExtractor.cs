@@ -9,7 +9,7 @@ internal class PVDataExtractor
     {
         string[] modDirectoryPaths = Directory.GetDirectories(modsRootDirectoryPath);
         List<Task<PVData[]?>> getPVDataCollectionTasks = new();
-        foreach (var path in modDirectoryPaths)
+        foreach (string path in modDirectoryPaths)
         {
             getPVDataCollectionTasks.Add(GetPVDataCollectionFromIndividualModDirectory(path));
         }
@@ -26,29 +26,36 @@ internal class PVDataExtractor
             }
         }
 
+        if (allPVDataCollections.Count < 1)
+        {
+            throw new Exception($"Unable to find mod PV data in directory \"{modsRootDirectoryPath}\"");
+        }
+
         return allPVDataCollections.ToArray();
     }
 
     private static async Task<PVData[]?> GetPVDataCollectionFromIndividualModDirectory(string modDirectoryPath)
     {
-        string? modName = await ParseModNameFromConfigTOML(modDirectoryPath);
-        return await ParsePVDataCollectionFromModPVDB(modDirectoryPath, modName);
+        PVData[]? pvDataCollection;
+        try
+        {
+            string? modName = await ParseModNameFromConfigTOML(modDirectoryPath);
+            pvDataCollection = await ParsePVDataCollectionFromModPVDB(modDirectoryPath, modName);
+        }
+        catch (Exception ex)
+        {
+            pvDataCollection = null; // some mods don't have mod_pv_dbs 
+        }
+
+        return pvDataCollection;
     }
 
     private static async Task<string?> ParseModNameFromConfigTOML(string modDirectoryPath)
     {
         string modTomlFilePath = Path.Join(modDirectoryPath, "config.toml");
-        string? modName;
-        try
-        {
-            string rawConfigText = await File.ReadAllTextAsync(modTomlFilePath);
-            var model = Toml.ToModel(rawConfigText);
-            modName = model["name"].ToString();
-        }
-        catch (Exception ex)
-        {
-            throw new Exception($"Unable to get name from config.toml. Reason: {ex.Message}");
-        }
+        string rawConfigText = await File.ReadAllTextAsync(modTomlFilePath);
+        var model = Toml.ToModel(rawConfigText);
+        string? modName = model["name"].ToString();
 
         return modName;
     }
@@ -197,7 +204,7 @@ internal class PVDataExtractor
                 difficulty += 0.5m;
             }
         }
-        catch (Exception e)
+        catch (Exception ex)
         {
             // Unable to parse difficulty
             difficulty = 0m;
