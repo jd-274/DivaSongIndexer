@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             folderBrowserDialog = new FolderBrowserDialog();
             label1 = new Label();
             modsDirectoryTextBox = new TextBox();
@@ -130,7 +131,9 @@
             Controls.Add(modsDirectoryTextBox);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "DivaSongIndexer";
             ((System.ComponentModel.ISupportInitialize)loadingSpinnerPictureBox).EndInit();
             ResumeLayout(false);

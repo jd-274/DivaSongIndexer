@@ -50,7 +50,7 @@ public partial class MainForm : Form
             // Note: use Run to move work off of main thread (allows loading animation)
             string outputFilePath = await Task.Run(CreateSongIndex);
 
-            messageText = $"Song index created in: \"{outputFilePath}\"";
+            messageText = $"Song index created in: {outputFilePath}";
             messageCaption = "Index Created";
             icon = MessageBoxIcon.Information;
         }
