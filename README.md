@@ -1,0 +1,37 @@
+![DivaSongIndexer](.github/logo.png)
+---
+[![Download](https://img.shields.io/badge/download-F8C517.svg?style=for-the-badge&logo=thestorygraph&logoColor=black)](https://github.com/jd-274/DivaSongIndexer/releases)
+[![Feedback](https://img.shields.io/badge/feedback-4285F4.svg?style=for-the-badge&logo=googledocs&logoColor=white)](#feedback)
+[![Support](https://img.shields.io/badge/support-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/jd274)
+
+DivaSongIndexer is a small utility to export modded song information for Hatsune Miku: Project DIVA Mega Mix+ into a human-readible index (CSV file)
+
+## Prerequisites
+Make sure you have **version 6.0 or greater** of the .NET Runtime from Microsoft installed on your machine: https://dotnet.microsoft.com/en-us/download
+
+NOTE: You may already this installed if you use [TekkaGB's DivaModManager](https://github.com/TekkaGB/DivaModManager)
+
+## Usage
+- Download the latest version from the [Releases](https://github.com/jd-274/DivaSongIndexer/releases) page
+- Extract its contents to your preferred directory
+- Launch the executable. A small window should appear prompting you for a "Mods" directory and an "Output" directory
+- For the "Mods" directory, browse and select the directory that contains your Project DIVA Mega Mix+ mods, as specified by your [DIVA Mod Loader configuration file](https://github.com/blueskythlikesclouds/DivaModLoader?tab=readme-ov-file#configuration-file)
+  - This directory is usually in a location such as: `C:\Program Files\SteamLibrary\steamapps\common\Hatsune Miku Project DIVA Mega Mix Plus\mods`
+- For the "Output" directory, browse and select the directory where the index will be output
+  - This can be anywhere, such as a "Downloads" folder
+- Finally, click the "Create Song Index" button. After some time, your index will be created in the specified output directory
+
+## Output Example
+The generated index will be a CSV file that can be opened on most spreadsheet software. It will contain several relevant columns of data including the PV ID, Song Name, Source (Mod Name), Artist Name, and the available Song Difficulties
+
+![output example](.github/outputexample.png)
+
+## Feedback
+I hope to keep improving this project with any fixes or suggestions from the community. The best ways to send feedback are:
+- [Google Form](TODO) (allows anonymous submissions)
+- [Github Issues](https://github.com/jd-274/DivaSongIndexer/issues)
+
+## Credits
+- Licensing for all third party libraries can be found under the [THIRD-PARTY-LICENSES.txt](THIRD-PARTY-LICENSES.txt) file.
+- All instances of the "Tako Luka with Notepad" art were used with permission from the artist, [StukPixel](https://ko-fi.com/stukpixel), for this project. All rights to this artwork are reserved by the artist.
+- And a special thanks to all of the friends I've made in the Project DIVA Mega Mix+ community. This project would not have been possible without your support.
