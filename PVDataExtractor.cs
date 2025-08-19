@@ -37,9 +37,14 @@ internal class PVDataExtractor
     private static async Task<PVData[]?> GetPVDataCollectionFromIndividualModDirectory(string modDirectoryPath)
     {
         PVData[]? pvDataCollection;
+        string? modName = await ParseModNameFromConfigTOML(modDirectoryPath);
+        if (modName == null)
+        {
+            modName = InferModNameFromDirectoryPath(modDirectoryPath); // fallback
+        }
+
         try
         {
-            string? modName = await ParseModNameFromConfigTOML(modDirectoryPath);
             pvDataCollection = await ParsePVDataCollectionFromModPVDB(modDirectoryPath, modName);
         }
         catch (Exception ex)
@@ -52,12 +57,26 @@ internal class PVDataExtractor
 
     private static async Task<string?> ParseModNameFromConfigTOML(string modDirectoryPath)
     {
-        string modTomlFilePath = Path.Join(modDirectoryPath, "config.toml");
-        string rawConfigText = await File.ReadAllTextAsync(modTomlFilePath);
-        var model = Toml.ToModel(rawConfigText);
-        string? modName = model["name"].ToString();
+        string? modName;
+        try 
+        {
+            string modTomlFilePath = Path.Join(modDirectoryPath, "config.toml");
+            string rawConfigText = await File.ReadAllTextAsync(modTomlFilePath);
+            var model = Toml.ToModel(rawConfigText);
+            modName = model["name"].ToString();
+        }
+        catch (Exception ex)
+        {
+            modName = null; // sometimes mod name not in TOML file
+        }
 
         return modName;
+    }
+
+    private static string InferModNameFromDirectoryPath(string modDirectoryPath)
+    {
+        // Assumes the mod directory is named after the mod
+        return new DirectoryInfo(modDirectoryPath).Name;
     }
 
     private static async Task<PVData[]?> ParsePVDataCollectionFromModPVDB(string modDirectoryPath, string modName="")
