@@ -31,7 +31,7 @@ I hope to keep improving this project with input from the community. If you find
 - [Github Issue](https://github.com/jd-274/DivaSongIndexer/issues) 
 - [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScFRVfX3Qmh8JQG0CdcE6ihMRo-U1KtoIkJU_96TDJgtvb9Xg/viewform?usp=dialog) (allows anonymous submissions)
 
-And if you like the project, be sure to leave a star or consider [supporting me](https://ko-fi.com/jd274)!
+And if you like the project, consider leaving a star or [supporting me](https://ko-fi.com/jd274)!
 
 ## Credits
 - Licensing for all third party libraries can be found under the [THIRD-PARTY-LICENSES.txt](THIRD-PARTY-LICENSES.txt) file.
