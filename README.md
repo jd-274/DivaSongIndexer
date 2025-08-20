@@ -1,6 +1,6 @@
 ![DivaSongIndexer](.github/banner.png)
 ---
-[![Download](https://img.shields.io/badge/download-F8C517.svg?style=for-the-badge&logo=gitlfs&logoColor=black)](https://github.com/jd-274/DivaSongIndexer/releases)
+[![Download](https://img.shields.io/badge/download-F8C517.svg?style=for-the-badge&logo=protondrive&logoColor=black)](https://github.com/jd-274/DivaSongIndexer/releases)
 [![Feedback](https://img.shields.io/badge/feedback-4285F4.svg?style=for-the-badge&logo=googledocs&logoColor=white)](#feedback)
 [![Support](https://img.shields.io/badge/support-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/jd274)
 
@@ -9,7 +9,7 @@ DivaSongIndexer is a small utility to export modded song information for Hatsune
 ## Prerequisites
 Make sure you have **version 6.0 or greater** of the .NET Runtime from Microsoft installed on your machine: https://dotnet.microsoft.com/en-us/download
 
-NOTE: You may already this installed if you use [TekkaGB's DivaModManager](https://github.com/TekkaGB/DivaModManager)
+NOTE: You may already have this installed if you use [TekkaGB's DivaModManager](https://github.com/TekkaGB/DivaModManager)
 
 ## Usage
 - Download the latest version from the [Releases](https://github.com/jd-274/DivaSongIndexer/releases) page
