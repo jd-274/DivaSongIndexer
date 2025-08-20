@@ -7,7 +7,7 @@
 DivaSongIndexer is a small utility to export modded song information for Hatsune Miku: Project DIVA Mega Mix+ into a human-readible index (CSV file)
 
 ## Prerequisites
-Make sure you have **version 6.0 or greater** of the .NET Runtime from Microsoft installed on your machine: https://dotnet.microsoft.com/en-us/download
+Make sure you have **version 6.0 or greater** of the .NET Runtime from Microsoft installed: https://dotnet.microsoft.com/en-us/download
 
 NOTE: You may already have this installed if you use [TekkaGB's DivaModManager](https://github.com/TekkaGB/DivaModManager)
 
