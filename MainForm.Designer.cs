@@ -33,9 +33,6 @@
             label1 = new Label();
             modsDirectoryTextBox = new TextBox();
             modsDirectoryBrowseButton = new Button();
-            outputDirectoryBrowseButton = new Button();
-            outputDirectoryTextBox = new TextBox();
-            label2 = new Label();
             createSongIndexButton = new Button();
             loadingSpinnerPictureBox = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)loadingSpinnerPictureBox).BeginInit();
@@ -46,9 +43,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(23, 18);
             label1.Name = "label1";
-            label1.Size = new Size(122, 15);
+            label1.Size = new Size(107, 15);
             label1.TabIndex = 1;
-            label1.Text = "Select Mods Directory";
+            label1.Text = "Select Mods Folder";
             // 
             // modsDirectoryTextBox
             // 
@@ -66,38 +63,11 @@
             modsDirectoryBrowseButton.TabIndex = 3;
             modsDirectoryBrowseButton.Text = "Browse";
             modsDirectoryBrowseButton.UseVisualStyleBackColor = true;
-            modsDirectoryBrowseButton.Click += modDirectoryBrowseButton_Click;
-            // 
-            // outputDirectoryBrowseButton
-            // 
-            outputDirectoryBrowseButton.Location = new Point(440, 98);
-            outputDirectoryBrowseButton.Name = "outputDirectoryBrowseButton";
-            outputDirectoryBrowseButton.Size = new Size(100, 26);
-            outputDirectoryBrowseButton.TabIndex = 6;
-            outputDirectoryBrowseButton.Text = "Browse";
-            outputDirectoryBrowseButton.UseVisualStyleBackColor = true;
-            outputDirectoryBrowseButton.Click += outputDirectoryBrowseButton_Click;
-            // 
-            // outputDirectoryTextBox
-            // 
-            outputDirectoryTextBox.BorderStyle = BorderStyle.FixedSingle;
-            outputDirectoryTextBox.Location = new Point(23, 99);
-            outputDirectoryTextBox.Name = "outputDirectoryTextBox";
-            outputDirectoryTextBox.Size = new Size(410, 23);
-            outputDirectoryTextBox.TabIndex = 5;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(23, 76);
-            label2.Name = "label2";
-            label2.Size = new Size(130, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Select Output Directory";
+            modsDirectoryBrowseButton.Click += modsDirectoryBrowseButton_Click;
             // 
             // createSongIndexButton
             // 
-            createSongIndexButton.Location = new Point(212, 144);
+            createSongIndexButton.Location = new Point(212, 84);
             createSongIndexButton.Name = "createSongIndexButton";
             createSongIndexButton.Size = new Size(150, 26);
             createSongIndexButton.TabIndex = 7;
@@ -108,7 +78,7 @@
             // loadingSpinnerPictureBox
             // 
             loadingSpinnerPictureBox.Image = Properties.Resources.LoadingSpinner;
-            loadingSpinnerPictureBox.Location = new Point(365, 145);
+            loadingSpinnerPictureBox.Location = new Point(365, 85);
             loadingSpinnerPictureBox.Name = "loadingSpinnerPictureBox";
             loadingSpinnerPictureBox.Size = new Size(25, 25);
             loadingSpinnerPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
@@ -121,12 +91,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(559, 191);
+            ClientSize = new Size(559, 131);
             Controls.Add(loadingSpinnerPictureBox);
             Controls.Add(createSongIndexButton);
-            Controls.Add(outputDirectoryBrowseButton);
-            Controls.Add(outputDirectoryTextBox);
-            Controls.Add(label2);
             Controls.Add(modsDirectoryBrowseButton);
             Controls.Add(modsDirectoryTextBox);
             Controls.Add(label1);
@@ -145,9 +112,6 @@
         private Label label1;
         private TextBox modsDirectoryTextBox;
         private Button modsDirectoryBrowseButton;
-        private Button outputDirectoryBrowseButton;
-        private TextBox outputDirectoryTextBox;
-        private Label label2;
         private Button createSongIndexButton;
         private PictureBox loadingSpinnerPictureBox;
     }
