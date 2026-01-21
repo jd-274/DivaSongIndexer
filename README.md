@@ -13,13 +13,10 @@ NOTE: You may already have this installed if you use [TekkaGB's DivaModManager](
 
 ## Usage
 - Download the latest version from the [Releases](https://github.com/jd-274/DivaSongIndexer/releases) page
-- Extract its contents to your preferred directory
-- Launch the executable. A small window should appear prompting you for a "Mods" directory and an "Output" directory
-- For the "Mods" directory, browse and select the directory that contains your Project DIVA Mega Mix+ mods, as specified by your [DIVA Mod Loader configuration file](https://github.com/blueskythlikesclouds/DivaModLoader?tab=readme-ov-file#configuration-file)
+- Extract its contents to any location on your computer
+- Launch the executable. A small window will prompt you for the "mods" folder that contains your Project DIVA Mega Mix+ mods, as specified by your [DIVA Mod Loader configuration file](https://github.com/blueskythlikesclouds/DivaModLoader?tab=readme-ov-file#configuration-file)
   - This directory is usually in a location such as: `C:\Program Files\SteamLibrary\steamapps\common\Hatsune Miku Project DIVA Mega Mix Plus\mods`
-- For the "Output" directory, browse and select the directory you want the index to be saved to
-  - This can be anywhere, such as a "Downloads" folder
-- Finally, click the "Create Song Index" button. After some time, your index will be created in the specified output directory
+- Click the "Create Song Index" button. This will prompt you for an "output" folder where the index will finally be saved
 
 ## Output Example
 The generated index will be a CSV file that can be opened on most spreadsheet programs. It will contain several relevant columns of data including the PV ID, Song Name, Source (Mod Name), Artist Name, and the available Song Difficulties
