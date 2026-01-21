@@ -33,6 +33,7 @@ public partial class MainForm : Form
             else
             {
                 modsDirectoryPath = selectedModsDirectoryPath;
+                modsDirectoryTextBox.Text = selectedModsDirectoryPath;
             }
         }
 

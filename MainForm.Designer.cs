@@ -52,14 +52,14 @@
             modsDirectoryTextBox.BorderStyle = BorderStyle.FixedSingle;
             modsDirectoryTextBox.Location = new Point(23, 41);
             modsDirectoryTextBox.Name = "modsDirectoryTextBox";
-            modsDirectoryTextBox.Size = new Size(410, 23);
+            modsDirectoryTextBox.Size = new Size(380, 23);
             modsDirectoryTextBox.TabIndex = 2;
             // 
             // modsDirectoryBrowseButton
             // 
-            modsDirectoryBrowseButton.Location = new Point(440, 40);
+            modsDirectoryBrowseButton.Location = new Point(410, 40);
             modsDirectoryBrowseButton.Name = "modsDirectoryBrowseButton";
-            modsDirectoryBrowseButton.Size = new Size(100, 26);
+            modsDirectoryBrowseButton.Size = new Size(90, 26);
             modsDirectoryBrowseButton.TabIndex = 3;
             modsDirectoryBrowseButton.Text = "Browse";
             modsDirectoryBrowseButton.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             // 
             // createSongIndexButton
             // 
-            createSongIndexButton.Location = new Point(212, 84);
+            createSongIndexButton.Location = new Point(182, 84);
             createSongIndexButton.Name = "createSongIndexButton";
             createSongIndexButton.Size = new Size(150, 26);
             createSongIndexButton.TabIndex = 7;
@@ -78,7 +78,7 @@
             // loadingSpinnerPictureBox
             // 
             loadingSpinnerPictureBox.Image = Properties.Resources.LoadingSpinner;
-            loadingSpinnerPictureBox.Location = new Point(365, 85);
+            loadingSpinnerPictureBox.Location = new Point(335, 85);
             loadingSpinnerPictureBox.Name = "loadingSpinnerPictureBox";
             loadingSpinnerPictureBox.Size = new Size(25, 25);
             loadingSpinnerPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
@@ -91,7 +91,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(559, 131);
+            ClientSize = new Size(519, 131);
             Controls.Add(loadingSpinnerPictureBox);
             Controls.Add(createSongIndexButton);
             Controls.Add(modsDirectoryBrowseButton);
