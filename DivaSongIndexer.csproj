@@ -10,7 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="LICENSE.txt" />
+    <None Remove="THIRD-PARTY-LICENSES.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="LICENSE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\tako.ico" />
+    <Content Include="THIRD-PARTY-LICENSES.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
